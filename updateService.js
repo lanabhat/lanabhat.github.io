@@ -3,12 +3,26 @@
 
     angular.module('YakshadhwaniApp').factory('updateSer', [updateSer]);
 function updateSer() {  
-		var latestVersion = "1.1"
+		var latestVersion = "1.0"
 
-		function CheckVersion(curVer)
+		function CheckifVersionUpdated(curVer)
 		{
+			if(curVer != latestVersion)
+			{
+				return true;
+
+			}
+			else
+			{
+				return false;
+			}
 			
 		}
+
+		    return {
+            getVersionDetail: CheckifVersionUpdated,
+          
+        };
 
 	 }; //Service finction
 })(); //Self invocation
